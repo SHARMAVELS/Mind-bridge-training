@@ -1,0 +1,28 @@
+import java.util.*;
+class Area
+{
+   int area(int ra,int width)
+    {
+        return ra*width;
+    }
+    double area(int r)
+    {
+        return(int) Math.PI*r*r;
+    }
+    double area(int base,int height,boolean is)
+    {
+        return 0.5*base*height;
+    }
+}
+class Methodoverloading
+{
+    public static void main(String args[]){
+   Area ar=new Area();
+   System.out.println(ar.area(3,5));
+      System.out.println(ar.area(3));
+         System.out.println(ar.area(3,5,true));
+    }
+
+
+
+}
