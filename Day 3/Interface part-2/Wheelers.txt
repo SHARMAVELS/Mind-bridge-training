@@ -1,0 +1,29 @@
+import java.util.*;
+interface Vehicle
+{
+    void start();
+}
+interface Fourwheel extends Vehicle
+{
+    public void start();
+    
+}
+interface Twowheeler extends Vehicle
+{
+    public void start();
+   
+}
+class Car implements Fourwheel,Twowheeler
+{
+    public void start()
+    {
+        System.out.print("car start");
+    }
+}
+class Wheel
+{
+    public static void main (String[] args) {
+    Car c=new Car();
+    c.start();
+    }
+}

@@ -1,0 +1,49 @@
+import java.util.*;
+class Shape
+{
+    void area()
+    {
+        System.out.println("generating Shape");
+    }
+}
+class Rectangle extends Shape
+{
+    int length;
+    int breath;
+    Rectangle(int l,int b)
+    {
+        this.length=l;
+        this.breath=b;
+    }
+    
+    void area()
+    {
+        System.out.println(length*breath);
+    }
+}
+class Square extends Rectangle
+{
+    int side;
+    Square(int side)
+    {
+       super(side,side);
+    }
+    void area()
+    {
+        System.out.println(side*side);
+    }
+}
+class Shapes
+{
+    public static void main(String args[])
+    {
+        Shape sh=new Shape();
+        sh.area();
+        
+        Rectangle re=new Rectangle(4,3);
+        re.area();
+        
+        Square sq=new Square(5);
+        sq.area();
+    }
+}

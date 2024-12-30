@@ -1,0 +1,41 @@
+import java.util.*;
+interface  Animal
+{
+   void eat();
+   void    sleep();
+}
+class Dog implements Animal
+{
+   public void eat()
+    {
+        System.out.println("Dog eats pedigire");
+    }
+   public void sleep()
+    {
+        System.out.println("Dog sleeps");
+    }
+}
+class Cat implements Animal
+{
+    public void eat()
+    {
+        System.out.println("cat eats drools");
+    }
+    public void sleep()
+    {
+        System.out.println("cat sleeps");
+    }
+}
+class Basicinterface
+{
+    public static void main (String[] args) {
+        Dog ani=new Dog();
+        Cat an=new Cat();
+        
+        ani.eat();
+        ani.sleep();
+        
+        an.eat();
+        an.sleep();
+    }
+}

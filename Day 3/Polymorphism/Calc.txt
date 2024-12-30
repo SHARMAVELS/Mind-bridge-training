@@ -1,0 +1,29 @@
+import java.util.*;
+class Calculator
+{
+    void add(int one,int two)
+    {
+        System.out.println(one+two);
+    }
+    
+    void add(double one,double two,double three)
+    {
+        System.out.println(one+two+three);
+    }
+    
+    void add(int one,int two,int three)
+    {
+        System.out.println(one+two+three);
+    }
+}
+class Calc
+{
+    public static void main(String args[])
+    {
+        Calculator cal=new Calculator();
+         
+         cal.add(2,1);
+         cal.add(1.2,2.1,4.2);
+         cal.add(1,2,3);
+    }
+}

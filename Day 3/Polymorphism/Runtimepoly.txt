@@ -1,0 +1,36 @@
+import java.util.*;
+class Employee
+{
+    void calculate()
+    {
+        System.out.println("Employee salary");
+    }
+}
+class Manager extends Employee
+{
+    void calculate()
+    {
+        System.out.println("Manager salary");
+    }
+}
+class Developer extends Employee
+{
+    void calculate()
+    {
+        System.out.println("Developer salary");
+    }
+}
+class Runtimepoly
+{
+    public static void main(String args[])
+    {
+        Employee emp=new Employee();
+        emp.calculate();
+        
+        Employee man=new Manager();
+        man.calculate();
+        
+        Employee dev =new Developer();
+        dev.calculate();
+    }
+}
