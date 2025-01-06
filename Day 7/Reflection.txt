@@ -1,0 +1,53 @@
+import java.util.*;
+import java.lang.reflect.*;
+
+class Hello
+{
+    private int age;
+    private int num;
+    Hello()
+    {
+        age=20;
+        num=123;
+    }
+    
+    Hello(int a,int n)
+    {
+        age=a;
+        num=n;
+    }
+    {
+        
+    }
+    public void detail()
+    {
+        System.out.print("John");
+    }
+}
+class Main
+{
+    public static void main (String[] args) {
+        Hello h=new Hello();
+        Class cls=h.getClass();
+        System.out.println(cls.getName());
+        
+        Method[] method=cls.getMethods();
+        for(Method m:method)
+        {
+            System.out.println(m.getName());
+        }
+        try {
+        System.out.println(method[0].invoke(h));
+            
+        } catch(Exception e) {
+            System.out.println("error");
+        }
+        
+        Field[] fields=cls.getDeclaredFields();
+        for(Field f:fields)
+        {
+            System.out.printlnln(f.getName() +""+f.getType());
+        }
+        
+    }
+}

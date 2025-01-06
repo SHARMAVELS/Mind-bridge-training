@@ -1,0 +1,33 @@
+import java.util.*;
+class Main
+{
+    public static void main (String[] args) {
+       Scanner sc=new Scanner(System.in);
+       String squ=sc.next();
+       String wrd=sc.next();
+       int n=squ.length();
+       int nn=wrd.length();
+       int g=0;
+       int co=0;
+       for(int i=0;i<n;i++)
+       {
+          if(wrd.charAt(g)==squ.charAt(i))
+          {
+              //System.out.print(wrd.charAt(g));
+              g++;
+          }
+          else{
+              g=0;
+          }
+          
+          if(g==nn)
+          {
+              g=0;
+              co++;
+          }
+       }
+       System.out.print(co);
+       
+       
+    }
+}
